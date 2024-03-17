@@ -7,6 +7,15 @@
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="Robot1" xmlns:xacro="http://ros.org/wiki/xacro">
+<xacro:include filename="$(find urdf_test)/gazebo/robot.gazebo" />
+
+  <link name="dummy">
+    </link>
+
+  <joint name="dummy_joint" type="fixed">
+    <parent link="dummy"/>
+    <child link="base_link"/>
+  </joint>
   <link name="base_link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.10774749511809 -0.0559414514988771 0.145140800944505"/>
