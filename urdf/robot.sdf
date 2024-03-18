@@ -1,0 +1,232 @@
+<sdf version='1.7'>
+  <model name='Robot1'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.107747 -0.055941 0.145141 0 -0 0</pose>
+        <mass>1.93317</mass>
+        <inertia>
+          <ixx>0.00629448</ixx>
+          <ixy>-1.15655e-06</ixy>
+          <ixz>8.66235e-07</ixz>
+          <iyy>0.00955088</iyy>
+          <iyz>-5.69961e-07</iyz>
+          <izz>0.0034208</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_left_joint' type='revolute'>
+      <pose relative_to='base_link'>0.26 0.034648 -0.1125 -0.1216 0 0</pose>
+      <parent>base_link</parent>
+      <child>back_left_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_link'>
+      <pose relative_to='back_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.004611 -1.5e-05 6e-06 0 -0 0</pose>
+        <mass>0.102064</mass>
+        <inertia>
+          <ixx>0.00015483</ixx>
+          <ixy>-5.11824e-09</ixy>
+          <ixz>2.1324e-09</ixz>
+          <iyy>9.32089e-05</iyy>
+          <iyz>-1.93432e-09</iyz>
+          <izz>9.3205e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/back_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.045 0.034648 -0.1125 -1.6924 -0 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>back_right_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_link'>
+      <pose relative_to='back_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.004611 -1.5e-05 6e-06 0 -0 0</pose>
+        <mass>0.10206</mass>
+        <inertia>
+          <ixx>0.00015483</ixx>
+          <ixy>-5.1182e-09</ixy>
+          <ixz>2.1324e-09</ixz>
+          <iyy>9.3209e-05</iyy>
+          <iyz>-1.9343e-09</iyz>
+          <izz>9.3205e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/back_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='forward_left_joint' type='revolute'>
+      <pose relative_to='base_link'>0.26 -0.33465 -0.1125 -1.6924 0 0</pose>
+      <parent>base_link</parent>
+      <child>forward_left_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='forward_left_link'>
+      <pose relative_to='forward_left_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.004611 -1.5e-05 6e-06 0 -0 0</pose>
+        <mass>0.10206</mass>
+        <inertia>
+          <ixx>0.00015483</ixx>
+          <ixy>-5.1182e-09</ixy>
+          <ixz>2.1324e-09</ixz>
+          <iyy>9.3209e-05</iyy>
+          <iyz>-1.9343e-09</iyz>
+          <izz>9.3205e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='forward_left_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/forward_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='forward_left_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/forward_left_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='forward_right_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.045 -0.33465 -0.1125 -0.1216 -0 -3.14159</pose>
+      <parent>base_link</parent>
+      <child>forward_right_link</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='forward_right_link'>
+      <pose relative_to='forward_right_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.004611 -1.5e-05 6e-06 0 -0 0</pose>
+        <mass>0.10206</mass>
+        <inertia>
+          <ixx>0.00015483</ixx>
+          <ixy>-5.1182e-09</ixy>
+          <ixz>2.1324e-09</ixz>
+          <iyy>9.3209e-05</iyy>
+          <iyz>-1.9344e-09</iyz>
+          <izz>9.3205e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='forward_right_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/forward_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='forward_right_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://urdf_test/meshes/forward_right_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

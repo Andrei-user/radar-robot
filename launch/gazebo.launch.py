@@ -20,18 +20,18 @@ def generate_launch_description():
     # this is a relative path to the xacro file defining the model
     modelFileRelativePath = 'urdf/robot_xacro.xacro'
     # this is a relative path to the Gazebo world file
-    worldFileRelativePath = 'model/empty_world.world'
+    #worldFileRelativePath = 'urdf/empty_world.world'
     
     # this is the absolute path to the model
     pathModelFile = os.path.join(get_package_share_directory(namePackage),modelFileRelativePath)
 
     # this is the absolute path to the world model
-    pathWorldFile = os.path.join(get_package_share_directory(namePackage),worldFileRelativePath)
+    pathWorldFile = os.path.join(get_package_share_directory(namePackage),"empty_world.world")
     # get the robot description from the xacro model file
     robotDescription = xacro.process_file(pathModelFile).toxml()
 
 
-    
+
 
     # this is the launch file from the gazebo_ros package
     gazebo_rosPackageLaunch=PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('gazebo_ros'),
